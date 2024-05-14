@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MONTHLY SPENDING</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <img
+      src="./images/pic.jpg"
+      alt="Sorry, this image is not available at the moment"
+    />
+
+    <div class="container">
+      <h2>WELCOME TO MY MONTHLY SPENDING CHART DISTRIBUTION</h2>
+      <h3>Monthly Spending</h3>
+      <form id="spendingForm">
+        <label for="food">Food:</label>
+        <input type="number" id="food" name="food" required /><br />
+
+        <label for="clothing">Clothing:</label>
+        <input type="number" id="clothing" name="clothing" required /><br />
+
+        <label for="saving">Saving:</label>
+        <input type="number" id="saving" name="saving" required /><br />
+
+        <label for="rent">Rent:</label>
+        <input type="number" id="rent" name="rent" required /><br />
+
+        <button type="button" onclick="saveData()">Save</button>
+        <button type="button" class="cancel" onclick="cancel()">Cancel</button>
+      </form>
+    </div>
+
+    <div id="chart-container">
+      <canvas id="barChart"></canvas>
+      <div class="legend">
+        <div class="legend-item">
+          <span
+            class="legend-color"
+            style="background-color: rgba(75, 192, 192, 0.7)"
+          ></span>
+          <span class="legend-label">Food</span>
+        </div>
+        <div class="legend-item">
+          <span
+            class="legend-color"
+            style="background-color: rgba(255, 99, 132, 0.7)"
+          ></span>
+          <span class="legend-label">Clothing</span>
+        </div>
+        <div class="legend-item">
+          <span
+            class="legend-color"
+            style="background-color: rgba(54, 162, 235, 0.7)"
+          ></span>
+          <span class="legend-label">Saving</span>
+        </div>
+        <div class="legend-item">
+          <span
+            class="legend-color"
+            style="background-color: rgba(255, 206, 86, 0.7)"
+          ></span>
+          <span class="legend-label">Rent</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

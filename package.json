@@ -1,0 +1,9 @@
+{
+    "name": "barristerbaffoesecil-package",
+    "description": "This is a simple web application that allows users to input their monthly spending on different categories and visualizes the distribution of their spending using a bar chart.",
+    "authors": "barristerbaffoesecil",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {"chart.js": "^3.7.0"}
+}
